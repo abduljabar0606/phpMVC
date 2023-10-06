@@ -20,7 +20,7 @@ class mdl_pinjam {
 
         public function tambahPeminjaman($data){
             $tgl_pinjam = $data['tgl_pinjam'];
-            $tgl_kembali = date('Y-m-d H:i:s', strtotime($tgl_pinjam . ' +1 minutes'));
+            $tgl_kembali = date('Y-m-d H:i:s', strtotime($tgl_pinjam . ' +2 days'));
 
             $query = "INSERT INTO tb_peminjaman (nama_peminjam, jenis_barang, no_barang, tgl_pinjam, tgl_kembali) VALUES (:nama_peminjam, :jenis_barang, :no_barang, :tgl_pinjam, :tgl_kembali)";
             $this->db->query($query);
