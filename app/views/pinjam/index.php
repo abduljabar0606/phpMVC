@@ -50,7 +50,7 @@
                     <?php endif;?>
                 </td>
                 <td>
-                    <?php if($row['tgl_pinjam'] == $row['tgl_kembali'] || $row['tgl_pinjam'] > $row['tgl_kembali'] ):?>
+                    <?php if($row['tgl_pinjam'] == $row['tgl_kembali'] || $row['tgl_pinjam'] > $row['tgl_kembali'] || $date >= $row['tgl_kembali'] ):?>
 
                         <a href="<?= BASE_URL ?>/pinjam/hapus/<?= $row['id'] ?>" class="btn btn-danger" onclick="return confirm('Hapus Data?');" >Hapus</a>
                     <?php else:?>
